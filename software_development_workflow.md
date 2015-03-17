@@ -8,7 +8,7 @@ Install Local Environment
 - Clone repository (github, bitbucket).
 
 ```
-git clone git@bitbucket.org:caseinc/proj-wework-dashboard.git [project-dir-name]
+git clone git@bitbucket.org:caseinc/proj-client.git [project-dir-name]
 ```
 
 - If a development virtual machine is required, clone the project related ops repository code. Create and configure guest machine via Vagrant (ask for help if you don't know how to do this).
@@ -68,25 +68,10 @@ php public/index.php migrations:status
 php public/index.php migrations:migrate
 ```
 
-New Project
---------------------------------------
-- Kick-off meeting with the whole team.
-- Create Epics.
-- Create Backlog and proritize.
-
-
-New Features / New Sprint
---------------------------------------
-
-- Why? User Stories.
-- Create tasks (Jira), define done criteria. Calculate Effort.
-- Planning. Decide which tasks are going to be part of the sprint.
-
-
 Start Feature Development
 --------------------------------------
 
-- Create branch from stable branch.
+- Create branch from stable branch based on the user stories defined for the sprint.
 
 ```
 git checkout -b 'new-feature'
@@ -95,13 +80,13 @@ git checkout -b 'new-feature'
 - When creating or adding new files you need to add them to the index first so you can commit them and push them later.
 
 ```
-git add module/Frontend/assets/style/sass/wework-bim/modules/frame/_header.scss
+git add module/Frontend/assets/style/sass/client/modules/frame/_header.scss
 ```
 
 - Try to make frequent code commits with relevant commit messages.
 
 ```
-git commit module/Frontend/assets/style/sass/wework-bim/modules/frame/_header.scss -m"new styles for site navigation in header"'
+git commit module/Frontend/assets/style/sass/client/modules/frame/_header.scss -m"new styles for site navigation in header"'
 ```
 
 - Frequently pull code from stable branch.
@@ -120,7 +105,7 @@ Code Review/QA
 --------------------------------------
 - Create a pull request in Github/Bitbucket from the feature branch you've been working on and the stable branch. Add 2 or more reviewers.
 
-- If any conflicts show up you need to fix them locally and update the feature branch. If you don't know how to resolve a conflict ask the team for help.
+- If any conflicts show up you need to fix them locally and update the feature branch. If you don't know how to resolve a conflict ask a teammate for help.
 
 - Feature branch must be checked in dev and/or in staging before being merged into the stable branch. 
 
